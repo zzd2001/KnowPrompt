@@ -1,0 +1,80 @@
+/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory output exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+09/07/2024 10:14:30 - INFO - data.processor -   Writing example 0 of 810
+09/07/2024 10:14:30 - INFO - data.processor -   input text : 明 日 ， 召 问 其 故 ， 曰 ： 「 [object_start] 玉 汝 [object_end] 为 [subject_start] 严 公 [subject_end] 之 使 ， 今 严 公 之 地 分 裂 ， 而 不 能 救 止 ， 无 面 目 还 报 ， 将 死 此 荒 寒 之 野 ， 是 以 哭 耳 。
+09/07/2024 10:14:30 - INFO - data.processor -   prompt : [sub] 严 公 [sub] [MASK] [obj] 玉 汝 [obj] .
+09/07/2024 10:14:30 - INFO - data.processor -   label : 上下级
+09/07/2024 10:14:31 - INFO - data.processor -   Average #tokens: 67.49
+09/07/2024 10:14:31 - INFO - data.processor -   810 (100.00 %) examples can fit max_seq_length = 128
+09/07/2024 10:14:31 - INFO - data.processor -   Writing example 0 of 810
+09/07/2024 10:14:31 - INFO - data.processor -   input text : 明 日 ， 召 问 其 故 ， 曰 ： 「 [object_start] 玉 汝 [object_end] 为 [subject_start] 严 公 [subject_end] 之 使 ， 今 严 公 之 地 分 裂 ， 而 不 能 救 止 ， 无 面 目 还 报 ， 将 死 此 荒 寒 之 野 ， 是 以 哭 耳 。
+09/07/2024 10:14:31 - INFO - data.processor -   prompt : [sub] 严 公 [sub] [MASK] [obj] 玉 汝 [obj] .
+09/07/2024 10:14:31 - INFO - data.processor -   label : 上下级
+09/07/2024 10:14:31 - INFO - data.processor -   Average #tokens: 67.49
+09/07/2024 10:14:31 - INFO - data.processor -   810 (100.00 %) examples can fit max_seq_length = 128
+09/07/2024 10:14:31 - INFO - data.processor -   Writing example 0 of 810
+09/07/2024 10:14:31 - INFO - data.processor -   input text : 明 日 ， 召 问 其 故 ， 曰 ： 「 [object_start] 玉 汝 [object_end] 为 [subject_start] 严 公 [subject_end] 之 使 ， 今 严 公 之 地 分 裂 ， 而 不 能 救 止 ， 无 面 目 还 报 ， 将 死 此 荒 寒 之 野 ， 是 以 哭 耳 。
+09/07/2024 10:14:31 - INFO - data.processor -   prompt : [sub] 严 公 [sub] [MASK] [obj] 玉 汝 [obj] .
+09/07/2024 10:14:31 - INFO - data.processor -   label : 上下级
+09/07/2024 10:14:31 - INFO - data.processor -   Average #tokens: 67.49
+09/07/2024 10:14:31 - INFO - data.processor -   810 (100.00 %) examples can fit max_seq_length = 128
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+loading..
+Finish save preprocessed data to ./dataset/cached_wiki80.pkl.
+loading..
+Finish save preprocessed data to ./dataset/cached_wiki80.pkl.
+loading..
+Finish save preprocessed data to ./dataset/cached_wiki80.pkl.
+Validation sanity check:   0%|                                                                                                   | 0/2 [00:00<?, ?it/s]5
+  | Name    | Type             | Params
+---------------------------------------------
+0 | model   | RobertaForPrompt | 102 M
+1 | loss_fn | CrossEntropyLoss | 0
+---------------------------------------------
+102 M     Trainable params
+0         Non-trainable params
+102 M     Total params
+409.232   Total estimated model params size (MB)
+/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:105: UserWarning: The dataloader, val dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 128 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Traceback (most recent call last):
+  File "main.py", line 233, in <module>
+    main()
+  File "main.py", line 179, in main
+    trainer.fit(lit_model, datamodule=data)
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 553, in fit
+    self._run(model)
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 918, in _run
+    self._dispatch()
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 986, in _dispatch
+    self.accelerator.start_training(self)
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/accelerators/accelerator.py", line 92, in start_training
+    self.training_type_plugin.start_training(trainer)
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 161, in start_training
+    self._results = trainer.run_stage()
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 996, in run_stage
+    return self._run_train()
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1031, in _run_train
+    self._run_sanity_check(self.lightning_module)
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1115, in _run_sanity_check
+    self._evaluation_loop.run()
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 111, in run
+    self.advance(*args, **kwargs)
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 110, in advance
+    dl_outputs = self.epoch_loop.run(
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 111, in run
+    self.advance(*args, **kwargs)
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 110, in advance
+    output = self.evaluation_step(batch, batch_idx, dataloader_idx)
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 154, in evaluation_step
+    output = self.trainer.accelerator.validation_step(step_kwargs)
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/accelerators/accelerator.py", line 211, in validation_step
+    return self.training_type_plugin.validation_step(*step_kwargs.values())
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 178, in validation_step
+    return self.model.validation_step(*args, **kwargs)
+  File "/root/KnowPrompt/lit_models/transformer.py", line 211, in validation_step
+    input_ids, attention_mask, labels, _ = batch
+ValueError: too many values to unpack (expected 4)

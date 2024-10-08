@@ -1,0 +1,137 @@
+/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory output exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+09/08/2024 15:31:55 - INFO - data.processor -   Writing example 0 of 810
+09/08/2024 15:31:55 - INFO - data.processor -   input text : 明 日 ， 召 问 其 故 ， 曰 ： 「 [object_start] 玉 汝 [object_end] 为 [subject_start] 严 公 [subject_end] 之 使 ， 今 严 公 之 地 分 裂 ， 而 不 能 救 止 ， 无 面 目 还 报 ， 将 死 此 荒 寒 之 野 ， 是 以 哭 耳 。
+09/08/2024 15:31:55 - INFO - data.processor -   prompt : [sub] 严 公 [sub] [MASK] [obj] 玉 汝 [obj] .
+09/08/2024 15:31:55 - INFO - data.processor -   label : 上下级
+09/08/2024 15:31:56 - INFO - data.processor -   Average #tokens: 67.49
+09/08/2024 15:31:56 - INFO - data.processor -   810 (100.00 %) examples can fit max_seq_length = 128
+09/08/2024 15:31:56 - INFO - data.processor -   Writing example 0 of 810
+09/08/2024 15:31:56 - INFO - data.processor -   input text : 明 日 ， 召 问 其 故 ， 曰 ： 「 [object_start] 玉 汝 [object_end] 为 [subject_start] 严 公 [subject_end] 之 使 ， 今 严 公 之 地 分 裂 ， 而 不 能 救 止 ， 无 面 目 还 报 ， 将 死 此 荒 寒 之 野 ， 是 以 哭 耳 。
+09/08/2024 15:31:56 - INFO - data.processor -   prompt : [sub] 严 公 [sub] [MASK] [obj] 玉 汝 [obj] .
+09/08/2024 15:31:56 - INFO - data.processor -   label : 上下级
+loading..
+Finish save preprocessed data to ./dataset/cached_wiki80.pkl.
+loading..
+Finish save preprocessed data to ./dataset/cached_wiki80.pkl.
+loading..
+09/08/2024 15:31:56 - INFO - data.processor -   Average #tokens: 67.49
+09/08/2024 15:31:56 - INFO - data.processor -   810 (100.00 %) examples can fit max_seq_length = 128
+09/08/2024 15:31:56 - INFO - data.processor -   Writing example 0 of 810
+09/08/2024 15:31:56 - INFO - data.processor -   input text : 明 日 ， 召 问 其 故 ， 曰 ： 「 [object_start] 玉 汝 [object_end] 为 [subject_start] 严 公 [subject_end] 之 使 ， 今 严 公 之 地 分 裂 ， 而 不 能 救 止 ， 无 面 目 还 报 ， 将 死 此 荒 寒 之 野 ， 是 以 哭 耳 。
+09/08/2024 15:31:56 - INFO - data.processor -   prompt : [sub] 严 公 [sub] [MASK] [obj] 玉 汝 [obj] .
+09/08/2024 15:31:56 - INFO - data.processor -   label : 上下级
+09/08/2024 15:31:57 - INFO - data.processor -   Average #tokens: 67.49
+09/08/2024 15:31:57 - INFO - data.processor -   810 (100.00 %) examples can fit max_seq_length = 128
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Finish save preprocessed data to ./dataset/cached_wiki80.pkl.
+Validation sanity check:   0%|                                                                                                 | 0/2 [00:00<?, ?it/s]--------------------------------------------
+[tensor([[  101, 21144,   698,  1062, 21144,   103, 21145,  4373,  3734, 21145,
+           119,   102,  3209,  3189,  8024,  1374,  7309,  1071,  3125,  8024,
+          3288,  8038,   519, 21128,  4373,  3734, 21129,   711, 21130,   698,
+          1062, 21131,   722,   886,  8024,   791,   698,  1062,   722,  1765,
+          1146,  6162,  8024,  5445,   679,  5543,  3131,  3632,  8024,  3187,
+          7481,  4680,  6820,  2845,  8024,  2199,  3647,  3634,  5774,  2170,
+           722,  7029,  8024,  3221,   809,  1526,  5455,   511,   102,     0,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0]],
+       device='cuda:0'), tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0]], device='cuda:0'), tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0]], device='cuda:0'), tensor([2], device='cuda:0'), tensor([[2, 4, 7, 9]], device='cuda:0')]
+5
+--------------------------------------------
+  | Name    | Type             | Params
+---------------------------------------------
+0 | model   | RobertaForPrompt | 102 M
+1 | loss_fn | CrossEntropyLoss | 0
+---------------------------------------------
+102 M     Trainable params
+0         Non-trainable params
+102 M     Total params
+409.232   Total estimated model params size (MB)
+/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:105: UserWarning: The dataloader, val dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 128 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Global seed set to 7
+/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:105: UserWarning: The dataloader, train dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 128 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Validation sanity check:  50%|████████████████████████████████████████████▌                                            | 1/2 [00:00<00:00,  1.72it/s]--------------------------------------------
+[tensor([[  101, 21144,  1762,  3209, 21144,   103, 21145,  2406,  2336, 21145,
+           119,   102,  3428,  6858,  7141,  8038, 21130,  1762,  3209, 21131,
+          1044,   711,  2768,  2548,  1092,  4522,  1400,  8024,  5326,  2956,
+         21128,  2406,  2336, 21129,  6887,  7716,  3635,  6963,  6956,  5392,
+           511,   102,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+             0,     0,     0,     0,     0,     0,     0,     0]],
+       device='cuda:0'), tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0]], device='cuda:0'), tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0]], device='cuda:0'), tensor([6], device='cuda:0'), tensor([[2, 4, 7, 9]], device='cuda:0')]
+5
+--------------------------------------------
+
+
+
+
+
+
+
+
+
+Epoch 0:   6%|████▌                                                                         | 95/1620 [00:19<05:03,  5.03it/s, loss=2.21, v_num=oyih]
+/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py:1047: UserWarning: Detected KeyboardInterrupt, attempting graceful shutdown...
+
+Epoch 0:   6%|████▌                                                                         | 95/1620 [00:19<05:03,  5.03it/s, loss=2.21, v_num=oyih]best model save path
+Traceback (most recent call last):
+  File "/root/.conda/envs/knowprompt/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/root/.conda/envs/knowprompt/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/debugpy/server/cli.py", line 430, in main
+    run()
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "./main.py", line 297, in <module>
+    main()
+  File "./main.py", line 262, in main
+    if not args.two_steps: trainer.test()
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 703, in test
+    self.tested_ckpt_path = self.__load_ckpt_weights(ckpt_path)
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1143, in __load_ckpt_weights
+    raise MisconfigurationException(
+pytorch_lightning.utilities.exceptions.MisconfigurationException: `.test(ckpt_path="best")` is set but `ModelCheckpoint` is not configured to save the best model.

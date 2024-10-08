@@ -737,7 +737,6 @@ def convert_examples_to_features(examples, max_seq_length, tokenizer, args, rel2
 
             """
                 the relation between SUBJECT and OBJECT is .
-                
             """
 
             if ex_index % 10000 == 0:
@@ -752,7 +751,7 @@ def convert_examples_to_features(examples, max_seq_length, tokenizer, args, rel2
 
             if mode.startswith("text"):
                 for i, token in enumerate(example.sentence):
-                    if i == example.span1[0]:
+                    if i == example.span1[0]:  # SUBJECT_START开始位置
                         tokens.append(SUBJECT_START)
                     if i == example.span2[0]:
                         tokens.append(OBJECT_START)
@@ -784,10 +783,11 @@ def convert_examples_to_features(examples, max_seq_length, tokenizer, args, rel2
                     prompt = f"{SUBJECT} {tokenizer.mask_token} {OBJECT}."
             
             if ex_index == 0:
-                input_text = " ".join(tokens)
-                logger.info(f"input text : {input_text}")
-                logger.info(f"prompt : {prompt}")
+                input_text = " ".join(tokens)  
+                logger.info(f"input text : {input_text}")  # 明 日 ， 召 问 其 故 ， 曰 ： 「 [object_start] 玉 汝 [object_end] 为 [subject_start] 严 公 [subject_end] 之 使 ， 今 严 公 之 地 分 裂 ， 而 不 能 救 止 ， 无 面 目 还 报 ， 将 死 此 荒 寒 之 野 ， 是 以 哭 耳 。
+                logger.info(f"prompt : {prompt}")  # # [sub] 严 公 [sub] [MASK] [obj] 玉 汝 [obj] .
                 logger.info(f"label : {example.label}")
+            # 此处是编码句子对，所以将prompt和input text都作为输入
             inputs = tokenizer(
                 prompt,
                 " ".join(tokens),
@@ -796,6 +796,8 @@ def convert_examples_to_features(examples, max_seq_length, tokenizer, args, rel2
                 padding="max_length",
                 add_special_tokens=True
             )
+
+
             if use_gpt: cls_token_location = inputs['input_ids'].index(tokenizer.cls_token_id) 
             
             # find the subject and object tokens, choose the first ones
@@ -857,6 +859,161 @@ def convert_examples_to_features(examples, max_seq_length, tokenizer, args, rel2
         dataset = TensorDataset(input_ids, attention_mask, cls_idx, labels)
     elif use_bert:
         dataset = TensorDataset(input_ids, attention_mask, token_type_ids, labels, so)
+    else:
+        dataset = TensorDataset(input_ids, attention_mask, labels, so)
+    
+    return dataset
+# 中文数据集样本转换
+def convert_examples_to_features_chinese(examples, max_seq_length, tokenizer, args, rel2id):
+    """Loads a data file into a list of `InputBatch`s."""
+
+    save_file = "./dataset/cached_wiki80.pkl"
+    mode = "text"
+
+    num_tokens = 0
+    num_fit_examples = 0
+    num_shown_examples = 0
+    instances = []
+    
+    
+    use_bert = "BertTokenizer" in tokenizer.__class__.__name__
+    use_gpt = "GPT" in tokenizer.__class__.__name__
+    
+    assert not (use_bert and use_gpt), "model cannot be gpt and bert together"
+
+    if False:
+        with open(file=save_file, mode='rb') as fr:
+            instances = pickle.load(fr)
+        print('load preprocessed data from {}.'.format(save_file))
+
+    else:
+        print('loading..')
+        for (ex_index, example) in enumerate(examples):
+            
+
+            """
+                the relation between SUBJECT and OBJECT is .
+            """
+
+            if ex_index % 10000 == 0:
+                logger.info("Writing example %d of %d" % (ex_index, len(examples)))
+
+            tokens = []
+            SUBJECT_START = "[subject_start]"
+            SUBJECT_END = "[subject_end]"
+            OBJECT_START = "[object_start]"
+            OBJECT_END = "[object_end]"
+
+
+            if mode.startswith("text"):
+                for i, token in enumerate(example.sentence):
+                    if i == example.span1[0]:  # SUBJECT_START开始位置
+                        tokens.append(SUBJECT_START)
+                    if i == example.span2[0]:
+                        tokens.append(OBJECT_START)
+                    # for sub_token in tokenizer.tokenize(token):
+                    #     tokens.append(sub_token)
+                    if i == example.span1[1]:
+                        tokens.append(SUBJECT_END)
+                    if i == example.span2[1]:
+                        tokens.append(OBJECT_END)
+
+                    tokens.append(token)
+
+            SUBJECT = "".join(example.sentence[example.span1[0]: example.span1[1]])
+            OBJECT = "".join(example.sentence[example.span2[0]: example.span2[1]])
+            SUBJECT_ids = tokenizer(SUBJECT, add_special_tokens=False)['input_ids']
+            OBJECT_ids = tokenizer(OBJECT, add_special_tokens=False)['input_ids']
+            
+            if use_gpt:
+                if args.CT_CL:
+                    prompt = f"[T1] [T2] [T3] [sub] {OBJECT} [sub] [T4] [obj] {SUBJECT} [obj] [T5] {tokenizer.cls_token}"
+                else:
+                    prompt = f"The relation between [sub] {SUBJECT} [sub] and [obj] {OBJECT} [obj] is {tokenizer.cls_token} ."
+            else:
+                # add prompt [T_n] and entity marker [obj] to enrich the context.
+
+                if args.use_template_words:
+                    prompt = f"[sub]{SUBJECT}[sub]{tokenizer.mask_token}[obj]{OBJECT}[obj]。"
+                else:
+                    prompt = f"{SUBJECT} {tokenizer.mask_token} {OBJECT}."
+            
+            if ex_index == 0:
+                input_text = "".join(tokens)  
+                logger.info(f"input text : {input_text}")  # 明 日 ， 召 问 其 故 ， 曰 ： 「 [object_start] 玉 汝 [object_end] 为 [subject_start] 严 公 [subject_end] 之 使 ， 今 严 公 之 地 分 裂 ， 而 不 能 救 止 ， 无 面 目 还 报 ， 将 死 此 荒 寒 之 野 ， 是 以 哭 耳 。
+                logger.info(f"prompt : {prompt}")  # # [sub] 严 公 [sub] [MASK] [obj] 玉 汝 [obj] .
+                logger.info(f"label : {example.label}")
+            # 此处是编码句子对，所以将prompt和input text都作为输入
+            inputs = tokenizer(
+                prompt,
+                "".join(tokens),
+                truncation="longest_first",
+                max_length=max_seq_length,
+                padding="max_length",
+                add_special_tokens=True
+            )
+
+
+            if use_gpt: cls_token_location = inputs['input_ids'].index(tokenizer.cls_token_id) 
+            
+            # find the subject and object tokens, choose the first ones
+            sub_st = sub_ed = obj_st = obj_ed = -1
+            for i in range(len(inputs['input_ids'])):
+                if sub_st == -1 and inputs['input_ids'][i:i+len(SUBJECT_ids)] == SUBJECT_ids:
+                    sub_st = i
+                    sub_ed = i + len(SUBJECT_ids)
+                if obj_st == -1 and inputs['input_ids'][i:i+len(OBJECT_ids)] == OBJECT_ids:
+                    obj_st = i
+                    obj_ed = i + len(OBJECT_ids)
+            
+            assert sub_st != -1 and obj_st != -1
+
+
+            num_tokens += sum(inputs['attention_mask'])
+
+
+            if sum(inputs['attention_mask']) > max_seq_length:
+                pass
+                # tokens = tokens[:max_seq_length]
+            else:
+                num_fit_examples += 1
+
+            x = OrderedDict()
+            x['input_ids'] = inputs['input_ids']
+            if use_bert: x['token_type_ids'] = inputs['token_type_ids']
+            x['attention_mask'] = inputs['attention_mask']
+            x['label'] = rel2id[example.label]
+            if use_gpt: x['cls_token_location'] = cls_token_location
+            x['so'] =[sub_st, sub_ed, obj_st, obj_ed]  # 存放分词后的实体的开始和结束位置
+
+            instances.append(x)
+
+
+        with open(file=save_file, mode='wb') as fw:
+            pickle.dump(instances, fw)
+        print('Finish save preprocessed data to {}.'.format( save_file))
+
+    input_ids = [o['input_ids'] for o in instances]
+    attention_mask = [o['attention_mask'] for o in instances]
+    if use_bert: token_type_ids = [o['token_type_ids'] for o in instances]
+    if use_gpt: cls_idx = [o['cls_token_location'] for o in instances]
+    labels = [o['label'] for o in instances]
+    so = torch.tensor([o['so'] for o in instances])
+
+    input_ids = torch.tensor(input_ids)
+    attention_mask = torch.tensor(attention_mask)
+    if use_gpt: cls_idx = torch.tensor(cls_idx)
+    if use_bert: token_type_ids = torch.tensor(token_type_ids)
+    labels = torch.tensor(labels)
+
+    logger.info("Average #tokens: %.2f" % (num_tokens * 1.0 / len(examples)))
+    logger.info("%d (%.2f %%) examples can fit max_seq_length = %d" % (num_fit_examples,
+                num_fit_examples * 100.0 / len(examples), max_seq_length))
+
+    if use_gpt:
+        dataset = TensorDataset(input_ids, attention_mask, cls_idx, labels)
+    elif use_bert:
+        dataset = TensorDataset(input_ids, attention_mask, token_type_ids, labels, so)  # 就是按照这样的方式去构建的数据集，TensorDataset 是 PyTorch 中的一个数据集类，用于将多个张量（tensors）打包成一个数据集。它是 torch.utils.data 模块的一部分，通常用于将数据加载到 DataLoader 中，以便在训练模型时进行批量处理。
     else:
         dataset = TensorDataset(input_ids, attention_mask, labels, so)
     
@@ -1130,7 +1287,7 @@ def get_dataset(mode, args, tokenizer, processor):
   
     if "wiki80" in args.task_name and "bart" not in args.model_name_or_path and "t5" not in args.model_name_or_path:
         # normal relation extraction task
-        dataset = convert_examples_to_features(
+        dataset = convert_examples_to_features_chinese(
             examples, args.max_seq_length, tokenizer, args, processor.get_labels()
         )
         return dataset

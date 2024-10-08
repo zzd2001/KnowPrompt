@@ -1,0 +1,1 @@
+{"Train/loss": 3.0106453895568848, "Train/ke_loss": 3.0106453895568848, "epoch": 0, "trainer/global_step": 1627, "_timestamp": 1725443558.7378469, "_runtime": 5132.012634754181, "_step": 33, "Eval/loss": 2.6762025356292725, "Eval/f1": 0.0, "Eval/best_f1": 0.0, "Test/f1": 0.0, "_wandb": {"runtime": 5131}}

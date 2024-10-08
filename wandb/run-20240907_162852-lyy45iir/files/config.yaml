@@ -1,0 +1,302 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.8.19
+    cli_version: 0.17.8
+    framework: huggingface
+    huggingface_version: 4.7.0
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1725697733
+    t:
+      1:
+      - 1
+      - 9
+      - 11
+      - 40
+      - 49
+      - 53
+      - 55
+      2:
+      - 1
+      - 9
+      - 11
+      - 40
+      - 49
+      - 53
+      - 55
+      3:
+      - 7
+      - 13
+      - 23
+      - 66
+      4: 3.8.19
+      5: 0.17.8
+      6: 4.7.0
+      8:
+      - 5
+      13: linux-x86_64
+    m:
+    - 1: trainer/global_step
+      6:
+      - 3
+    - 1: Train/loss
+      5: 1
+      6:
+      - 1
+    - 1: Train/ke_loss
+      5: 1
+      6:
+      - 1
+    - 1: epoch
+      5: 1
+      6:
+      - 1
+logger:
+  desc: null
+  value: true
+checkpoint_callback:
+  desc: null
+  value: true
+default_root_dir:
+  desc: null
+  value: None
+gradient_clip_val:
+  desc: null
+  value: 0.0
+gradient_clip_algorithm:
+  desc: null
+  value: norm
+process_position:
+  desc: null
+  value: 0
+num_nodes:
+  desc: null
+  value: 1
+num_processes:
+  desc: null
+  value: 1
+devices:
+  desc: null
+  value: None
+gpus:
+  desc: null
+  value: None
+auto_select_gpus:
+  desc: null
+  value: false
+tpu_cores:
+  desc: null
+  value: None
+ipus:
+  desc: null
+  value: None
+log_gpu_memory:
+  desc: null
+  value: None
+progress_bar_refresh_rate:
+  desc: null
+  value: None
+overfit_batches:
+  desc: null
+  value: 0.0
+track_grad_norm:
+  desc: null
+  value: -1
+check_val_every_n_epoch:
+  desc: null
+  value: 1
+fast_dev_run:
+  desc: null
+  value: false
+accumulate_grad_batches:
+  desc: null
+  value: 4
+max_epochs:
+  desc: null
+  value: 1
+min_epochs:
+  desc: null
+  value: None
+max_steps:
+  desc: null
+  value: None
+min_steps:
+  desc: null
+  value: None
+max_time:
+  desc: null
+  value: None
+limit_train_batches:
+  desc: null
+  value: 1.0
+limit_val_batches:
+  desc: null
+  value: 1.0
+limit_test_batches:
+  desc: null
+  value: 1.0
+limit_predict_batches:
+  desc: null
+  value: 1.0
+val_check_interval:
+  desc: null
+  value: 1.0
+flush_logs_every_n_steps:
+  desc: null
+  value: 100
+log_every_n_steps:
+  desc: null
+  value: 50
+accelerator:
+  desc: null
+  value: None
+sync_batchnorm:
+  desc: null
+  value: false
+precision:
+  desc: null
+  value: 32
+weights_summary:
+  desc: null
+  value: top
+weights_save_path:
+  desc: null
+  value: None
+num_sanity_val_steps:
+  desc: null
+  value: 2
+truncated_bptt_steps:
+  desc: null
+  value: None
+resume_from_checkpoint:
+  desc: null
+  value: None
+profiler:
+  desc: null
+  value: None
+benchmark:
+  desc: null
+  value: false
+deterministic:
+  desc: null
+  value: false
+reload_dataloaders_every_n_epochs:
+  desc: null
+  value: 0
+reload_dataloaders_every_epoch:
+  desc: null
+  value: false
+auto_lr_find:
+  desc: null
+  value: false
+replace_sampler_ddp:
+  desc: null
+  value: true
+terminate_on_nan:
+  desc: null
+  value: false
+auto_scale_batch_size:
+  desc: null
+  value: false
+prepare_data_per_node:
+  desc: null
+  value: true
+plugins:
+  desc: null
+  value: None
+amp_backend:
+  desc: null
+  value: native
+amp_level:
+  desc: null
+  value: O2
+distributed_backend:
+  desc: null
+  value: None
+move_metrics_to_cpu:
+  desc: null
+  value: false
+multiple_trainloader_mode:
+  desc: null
+  value: max_size_cycle
+stochastic_weight_avg:
+  desc: null
+  value: false
+wandb:
+  desc: null
+  value: true
+litmodel_class:
+  desc: null
+  value: BertLitModel
+seed:
+  desc: null
+  value: 7
+data_class:
+  desc: null
+  value: WIKI80
+lr_2:
+  desc: null
+  value: 3.0e-05
+model_class:
+  desc: null
+  value: RobertaForPrompt
+two_steps:
+  desc: null
+  value: false
+load_checkpoint:
+  desc: null
+  value: None
+batch_size:
+  desc: null
+  value: 1
+num_workers:
+  desc: null
+  value: 0
+data_dir:
+  desc: null
+  value: dataset/historyRE
+task_name:
+  desc: null
+  value: wiki80
+model_name_or_path:
+  desc: null
+  value: bert-base-chinese
+max_seq_length:
+  desc: null
+  value: 128
+ptune_k:
+  desc: null
+  value: 7
+use_prompt:
+  desc: null
+  value: true
+init_answer_words:
+  desc: null
+  value: 1
+init_type_words:
+  desc: null
+  value: 1
+init_answer_words_by_one_token:
+  desc: null
+  value: 0
+use_template_words:
+  desc: null
+  value: 1
+optimizer:
+  desc: null
+  value: AdamW
+lr:
+  desc: null
+  value: 3.0e-05
+weight_decay:
+  desc: null
+  value: 0.01
+t_lambda:
+  desc: null
+  value: 0.001
+t_gamma:
+  desc: null
+  value: 0.3

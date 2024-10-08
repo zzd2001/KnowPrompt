@@ -1,0 +1,89 @@
+/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory output exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+09/07/2024 09:53:20 - INFO - data.processor -   Writing example 0 of 6507
+09/07/2024 09:53:20 - INFO - data.processor -   input text : the original [subject_start] play [subject_end] was filled with very topical [object_start] humor [object_end] , so the director felt free to add current topical humor to the script .
+09/07/2024 09:53:20 - INFO - data.processor -   prompt : [sub] play [sub] <mask> [obj] humor [obj] .
+09/07/2024 09:53:20 - INFO - data.processor -   label : Component-Whole(e2,e1)
+loading..
+09/07/2024 09:53:23 - INFO - data.processor -   Average #tokens: 44.93
+09/07/2024 09:53:23 - INFO - data.processor -   6507 (100.00 %) examples can fit max_seq_length = 128
+09/07/2024 09:53:23 - INFO - data.processor -   Writing example 0 of 1493
+09/07/2024 09:53:23 - INFO - data.processor -   input text : the system as described above has its greatest application in an arrayed [subject_start] configuration [subject_end] of antenna [object_start] elements [object_end] .
+09/07/2024 09:53:23 - INFO - data.processor -   prompt : [sub] configuration [sub] <mask> [obj] elements [obj] .
+09/07/2024 09:53:23 - INFO - data.processor -   label : Component-Whole(e2,e1)
+Finish save preprocessed data to ./dataset/cached_wiki80.pkl.
+loading..
+Finish save preprocessed data to ./dataset/cached_wiki80.pkl.
+09/07/2024 09:53:24 - INFO - data.processor -   Average #tokens: 44.97
+09/07/2024 09:53:24 - INFO - data.processor -   1493 (100.00 %) examples can fit max_seq_length = 128
+09/07/2024 09:53:24 - INFO - data.processor -   Writing example 0 of 2717
+09/07/2024 09:53:24 - INFO - data.processor -   input text : the most common [subject_start] audits [subject_end] were about [object_start] waste [object_end] and recycling .
+09/07/2024 09:53:24 - INFO - data.processor -   prompt : [sub] audits [sub] <mask> [obj] waste [obj] .
+09/07/2024 09:53:24 - INFO - data.processor -   label : Message-Topic(e1,e2)
+09/07/2024 09:53:25 - INFO - data.processor -   Average #tokens: 44.94
+09/07/2024 09:53:25 - INFO - data.processor -   2717 (100.00 %) examples can fit max_seq_length = 128
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+loading..
+Finish save preprocessed data to ./dataset/cached_wiki80.pkl.
+  | Name    | Type             | Params
+---------------------------------------------
+0 | model   | RobertaForPrompt | 355 M
+1 | loss_fn | CrossEntropyLoss | 0
+---------------------------------------------
+355 M     Trainable params
+0         Non-trainable params
+355 M     Total params
+1,421.771 Total estimated model params size (MB)
+/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:105: UserWarning: The dataloader, val dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 128 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Validation sanity check:   0%|                                                                                                   | 0/2 [00:00<?, ?it/s]
+Global seed set to 7
+/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:105: UserWarning: The dataloader, train dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 128 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:   1%|▌                                                                             | 58/8000 [00:59<2:14:04,  1.01s/it, loss=2.83, v_num=g5dr]
+/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py:1047: UserWarning: Detected KeyboardInterrupt, attempting graceful shutdown...
+
+Epoch 0:   1%|▌                                                                             | 58/8000 [00:59<2:14:04,  1.01s/it, loss=2.83, v_num=g5dr]best model save path
+Traceback (most recent call last):
+  File "main.py", line 233, in <module>
+    main()
+  File "main.py", line 203, in main
+    if not args.two_steps: trainer.test()
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 703, in test
+    self.tested_ckpt_path = self.__load_ckpt_weights(ckpt_path)
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1143, in __load_ckpt_weights
+    raise MisconfigurationException(
+pytorch_lightning.utilities.exceptions.MisconfigurationException: `.test(ckpt_path="best")` is set but `ModelCheckpoint` is not configured to save the best model.

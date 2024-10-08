@@ -1,0 +1,363 @@
+2024-09-07 16:28:53,460 INFO    StreamThr :368298 [internal.py:wandb_internal():85] W&B internal server running at pid: 368298, started at: 2024-09-07 16:28:53.414049
+2024-09-07 16:28:53,462 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status
+2024-09-07 16:28:53,481 INFO    WriterThread:368298 [datastore.py:open_for_write():87] open: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/run-lyy45iir.wandb
+2024-09-07 16:28:53,519 DEBUG   SenderThread:368298 [sender.py:send():391] send: header
+2024-09-07 16:28:53,520 DEBUG   SenderThread:368298 [sender.py:send():391] send: run
+2024-09-07 16:28:53,578 INFO    SenderThread:368298 [sender.py:_setup_resume():761] checking resume status for None/dialogue_pl/lyy45iir
+2024-09-07 16:28:55,050 INFO    SenderThread:368298 [dir_watcher.py:__init__():211] watching files in: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files
+2024-09-07 16:28:55,050 INFO    SenderThread:368298 [sender.py:_start_run_threads():1200] run started: lyy45iir with start time 1725697733.476836
+2024-09-07 16:28:55,259 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: run_start
+2024-09-07 16:28:55,282 DEBUG   HandlerThread:368298 [system_info.py:__init__():26] System info init
+2024-09-07 16:28:55,282 DEBUG   HandlerThread:368298 [system_info.py:__init__():41] System info init done
+2024-09-07 16:28:55,289 INFO    HandlerThread:368298 [system_monitor.py:start():194] Starting system monitor
+2024-09-07 16:28:55,311 INFO    SystemMonitor:368298 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-09-07 16:28:55,311 INFO    HandlerThread:368298 [system_monitor.py:probe():214] Collecting system info
+2024-09-07 16:28:55,323 INFO    SystemMonitor:368298 [interfaces.py:start():188] Started cpu monitoring
+2024-09-07 16:28:55,352 INFO    SystemMonitor:368298 [interfaces.py:start():188] Started disk monitoring
+2024-09-07 16:28:55,361 INFO    SystemMonitor:368298 [interfaces.py:start():188] Started gpu monitoring
+2024-09-07 16:28:55,368 INFO    SystemMonitor:368298 [interfaces.py:start():188] Started memory monitoring
+2024-09-07 16:28:55,377 INFO    SystemMonitor:368298 [interfaces.py:start():188] Started network monitoring
+2024-09-07 16:28:55,377 DEBUG   HandlerThread:368298 [system_info.py:probe():152] Probing system
+2024-09-07 16:28:55,424 DEBUG   HandlerThread:368298 [gitlib.py:_init_repo():56] git repository is invalid
+2024-09-07 16:28:55,424 DEBUG   HandlerThread:368298 [system_info.py:probe():200] Probing system done
+2024-09-07 16:28:55,436 DEBUG   HandlerThread:368298 [system_monitor.py:probe():223] {'os': 'Linux-5.10.134-13.al8.x86_64-x86_64-with-glibc2.17', 'python': '3.8.19', 'heartbeatAt': '2024-09-07T08:28:55.405618', 'startedAt': '2024-09-07T08:28:52.696837', 'docker': None, 'cuda': None, 'args': ('--max_epochs=1', '--num_workers=0', '--model_name_or_path', 'bert-base-chinese', '--accumulate_grad_batches', '4', '--batch_size', '1', '--data_dir', 'dataset/historyRE', '--check_val_every_n_epoch', '1', '--data_class', 'WIKI80', '--max_seq_length', '128', '--model_class', 'RobertaForPrompt', '--t_lambda', '0.001', '--wandb', '--litmodel_class', 'BertLitModel', '--task_name', 'wiki80', '--lr', '3e-5'), 'state': 'running', 'program': './main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'host': 'intern-studio-067060', 'username': 'root', 'executable': '/root/.conda/envs/knowprompt/bin/python', 'cpu_count': 64, 'cpu_count_logical': 128, 'cpu_freq': {'current': 3.4996328125000007, 'min': 2900.0, 'max': 3500.0}, 'cpu_freq_per_core': [{'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.499, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.501, 'min': 2900.0, 'max': 3500.0}, {'current': 3.492, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.498, 'min': 2900.0, 'max': 3500.0}, {'current': 3.499, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.499, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.502, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.51, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.499, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.49, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.497, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.509, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.499, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.512, 'min': 2900.0, 'max': 3500.0}, {'current': 3.492, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.509, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.499, 'min': 2900.0, 'max': 3500.0}, {'current': 3.499, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.511, 'min': 2900.0, 'max': 3500.0}, {'current': 3.503, 'min': 2900.0, 'max': 3500.0}, {'current': 3.486, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.488, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.503, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.51, 'min': 2900.0, 'max': 3500.0}, {'current': 3.496, 'min': 2900.0, 'max': 3500.0}, {'current': 3.49, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.49, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}, {'current': 3.5, 'min': 2900.0, 'max': 3500.0}], 'disk': {'/': {'total': 3519.7501831054688, 'used': 169.38672637939453}}, 'gpu': 'NVIDIA A100-SXM4-80GB', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}], 'memory': {'total': 2014.9890518188477}}
+2024-09-07 16:28:55,441 INFO    HandlerThread:368298 [system_monitor.py:probe():224] Finished collecting system info
+2024-09-07 16:28:55,441 INFO    HandlerThread:368298 [system_monitor.py:probe():227] Publishing system info
+2024-09-07 16:28:55,452 DEBUG   HandlerThread:368298 [system_info.py:_save_conda():209] Saving list of conda packages installed into the current environment
+2024-09-07 16:28:56,064 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_created():271] file/dir created: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/conda-environment.yaml
+2024-09-07 16:29:06,626 DEBUG   HandlerThread:368298 [system_info.py:_save_conda():224] Saving conda packages done
+2024-09-07 16:29:06,647 INFO    HandlerThread:368298 [system_monitor.py:probe():229] Finished publishing system info
+2024-09-07 16:29:06,847 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:29:06,847 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: keepalive
+2024-09-07 16:29:06,860 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:29:06,870 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: keepalive
+2024-09-07 16:29:06,884 DEBUG   SenderThread:368298 [sender.py:send():391] send: files
+2024-09-07 16:29:06,901 INFO    SenderThread:368298 [sender.py:_save_file():1466] saving file wandb-metadata.json with policy now
+2024-09-07 16:29:07,111 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/conda-environment.yaml
+2024-09-07 16:29:07,111 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_created():271] file/dir created: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/wandb-metadata.json
+2024-09-07 16:29:08,454 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: python_packages
+2024-09-07 16:29:08,454 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: python_packages
+2024-09-07 16:29:08,455 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-07 16:29:08,460 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:29:08,532 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: stop_status
+2024-09-07 16:29:08,827 INFO    wandb-upload_0:368298 [upload_job.py:push():130] Uploaded file /tmp/tmptadbh8ogwandb/f6m89385-wandb-metadata.json
+2024-09-07 16:29:08,876 DEBUG   SenderThread:368298 [sender.py:send():391] send: telemetry
+2024-09-07 16:29:08,877 DEBUG   SenderThread:368298 [sender.py:send():391] send: telemetry
+2024-09-07 16:29:08,883 DEBUG   SenderThread:368298 [sender.py:send():391] send: metric
+2024-09-07 16:29:08,892 DEBUG   SenderThread:368298 [sender.py:send():391] send: telemetry
+2024-09-07 16:29:08,905 DEBUG   SenderThread:368298 [sender.py:send():391] send: metric
+2024-09-07 16:29:08,912 WARNING SenderThread:368298 [sender.py:send_metric():1417] Seen metric with glob (shouldn't happen)
+2024-09-07 16:29:08,919 DEBUG   SenderThread:368298 [sender.py:send():391] send: config
+2024-09-07 16:29:09,116 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_created():271] file/dir created: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:09,116 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_created():271] file/dir created: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/requirements.txt
+2024-09-07 16:29:09,229 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:29:11,123 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:13,138 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:13,866 DEBUG   SenderThread:368298 [sender.py:send():391] send: metric
+2024-09-07 16:29:13,866 DEBUG   SenderThread:368298 [sender.py:send():391] send: metric
+2024-09-07 16:29:13,866 WARNING SenderThread:368298 [sender.py:send_metric():1417] Seen metric with glob (shouldn't happen)
+2024-09-07 16:29:13,867 DEBUG   SenderThread:368298 [sender.py:send():391] send: config
+2024-09-07 16:29:14,385 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:29:15,150 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:17,169 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:18,456 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:29:19,175 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:19,530 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:29:21,180 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:23,182 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:23,455 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-07 16:29:23,455 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: stop_status
+2024-09-07 16:29:24,870 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:29:25,188 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:26,191 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/config.yaml
+2024-09-07 16:29:27,193 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:28,456 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:29:29,197 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:30,296 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:29:31,238 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:33,247 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:35,254 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:35,468 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:29:37,261 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:38,455 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-07 16:29:38,455 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: stop_status
+2024-09-07 16:29:38,456 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:29:39,266 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:40,483 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:29:41,269 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:43,277 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:45,287 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:45,678 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:29:47,292 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:48,457 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:29:49,300 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:50,891 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:29:51,306 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:53,312 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:53,456 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-07 16:29:53,456 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: stop_status
+2024-09-07 16:29:55,331 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:55,384 DEBUG   SystemMonitor:368298 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-09-07 16:29:55,409 DEBUG   SenderThread:368298 [sender.py:send():391] send: stats
+2024-09-07 16:29:56,103 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:29:57,335 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:29:58,457 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:29:59,343 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:01,349 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:01,367 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:30:03,357 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:05,363 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:06,371 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:30:07,367 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:08,455 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-07 16:30:08,456 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: stop_status
+2024-09-07 16:30:08,457 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:30:09,371 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:11,373 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:11,440 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:30:13,398 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:15,403 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:16,541 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:30:17,411 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:17,582 DEBUG   SenderThread:368298 [sender.py:send():391] send: metric
+2024-09-07 16:30:17,582 DEBUG   SenderThread:368298 [sender.py:send():391] send: metric
+2024-09-07 16:30:17,582 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: partial_history
+2024-09-07 16:30:17,608 WARNING SenderThread:368298 [sender.py:send_metric():1417] Seen metric with glob (shouldn't happen)
+2024-09-07 16:30:17,622 DEBUG   SenderThread:368298 [sender.py:send():391] send: metric
+2024-09-07 16:30:17,627 DEBUG   SenderThread:368298 [sender.py:send():391] send: metric
+2024-09-07 16:30:17,631 DEBUG   SenderThread:368298 [sender.py:send():391] send: metric
+2024-09-07 16:30:17,639 DEBUG   SenderThread:368298 [sender.py:send():391] send: history
+2024-09-07 16:30:17,645 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: summary_record
+2024-09-07 16:30:17,683 INFO    SenderThread:368298 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-07 16:30:18,421 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_created():271] file/dir created: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/wandb-summary.json
+2024-09-07 16:30:18,457 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:30:19,424 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:21,434 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:21,749 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:30:23,441 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:23,455 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-07 16:30:23,456 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: stop_status
+2024-09-07 16:30:25,422 DEBUG   SenderThread:368298 [sender.py:send():391] send: stats
+2024-09-07 16:30:25,444 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:26,882 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:30:27,450 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/config.yaml
+2024-09-07 16:30:27,450 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:28,457 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:30:29,453 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:31,458 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:32,358 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:30:33,463 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:35,472 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:37,478 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:37,594 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:30:38,455 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-07 16:30:38,456 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: stop_status
+2024-09-07 16:30:38,457 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:30:39,484 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:41,504 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:42,753 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:30:43,507 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:30:48,458 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:30:48,459 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:30:53,456 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-07 16:30:53,456 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: stop_status
+2024-09-07 16:30:53,796 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:30:55,425 DEBUG   SenderThread:368298 [sender.py:send():391] send: stats
+2024-09-07 16:30:58,458 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:30:59,459 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:31:05,459 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:31:08,456 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-07 16:31:08,456 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: stop_status
+2024-09-07 16:31:08,458 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:31:10,831 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:31:16,459 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:31:18,458 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:31:21,460 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:31:23,456 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-07 16:31:23,456 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: stop_status
+2024-09-07 16:31:25,416 DEBUG   SenderThread:368298 [sender.py:send():391] send: stats
+2024-09-07 16:31:27,417 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:31:28,458 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:31:32,460 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:31:37,460 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:31:38,456 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-07 16:31:38,457 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: stop_status
+2024-09-07 16:31:38,458 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:31:43,211 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:31:48,458 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:31:48,459 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:31:53,456 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-07 16:31:53,457 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: stop_status
+2024-09-07 16:31:53,764 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:31:55,418 DEBUG   SenderThread:368298 [sender.py:send():391] send: stats
+2024-09-07 16:31:58,458 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:31:59,460 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:32:04,460 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:32:08,456 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-07 16:32:08,457 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: stop_status
+2024-09-07 16:32:08,458 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:32:09,821 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:32:15,460 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:32:18,459 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:32:21,460 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:32:23,456 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-07 16:32:23,457 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: stop_status
+2024-09-07 16:32:25,421 DEBUG   SenderThread:368298 [sender.py:send():391] send: stats
+2024-09-07 16:32:27,423 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:32:28,459 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:32:32,460 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:32:37,461 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:32:38,456 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-07 16:32:38,457 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: stop_status
+2024-09-07 16:32:38,459 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:32:42,823 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:32:48,459 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:32:48,460 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:32:53,456 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: stop_status
+2024-09-07 16:32:53,457 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: stop_status
+2024-09-07 16:32:53,824 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:32:55,423 DEBUG   SenderThread:368298 [sender.py:send():391] send: stats
+2024-09-07 16:32:58,459 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:32:59,461 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:33:04,461 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:33:05,740 DEBUG   SenderThread:368298 [sender.py:send():391] send: exit
+2024-09-07 16:33:05,740 INFO    SenderThread:368298 [sender.py:send_exit():598] handling exit code: 1
+2024-09-07 16:33:05,797 INFO    SenderThread:368298 [sender.py:send_exit():600] handling runtime: 250
+2024-09-07 16:33:05,832 INFO    SenderThread:368298 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-07 16:33:05,833 INFO    SenderThread:368298 [sender.py:send_exit():606] send defer
+2024-09-07 16:33:05,838 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: defer
+2024-09-07 16:33:05,843 INFO    HandlerThread:368298 [handler.py:handle_request_defer():184] handle defer: 0
+2024-09-07 16:33:05,848 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: defer
+2024-09-07 16:33:05,854 INFO    SenderThread:368298 [sender.py:send_request_defer():622] handle sender defer: 0
+2024-09-07 16:33:05,861 INFO    SenderThread:368298 [sender.py:transition_state():626] send defer: 1
+2024-09-07 16:33:05,865 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: defer
+2024-09-07 16:33:05,877 INFO    HandlerThread:368298 [handler.py:handle_request_defer():184] handle defer: 1
+2024-09-07 16:33:05,881 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: defer
+2024-09-07 16:33:05,899 INFO    SenderThread:368298 [sender.py:send_request_defer():622] handle sender defer: 1
+2024-09-07 16:33:05,904 INFO    SenderThread:368298 [sender.py:transition_state():626] send defer: 2
+2024-09-07 16:33:05,908 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: defer
+2024-09-07 16:33:05,915 INFO    HandlerThread:368298 [handler.py:handle_request_defer():184] handle defer: 2
+2024-09-07 16:33:05,920 INFO    HandlerThread:368298 [system_monitor.py:finish():203] Stopping system monitor
+2024-09-07 16:33:05,925 DEBUG   SystemMonitor:368298 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-09-07 16:33:05,926 INFO    HandlerThread:368298 [interfaces.py:finish():200] Joined cpu monitor
+2024-09-07 16:33:05,929 DEBUG   SystemMonitor:368298 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-09-07 16:33:05,934 INFO    HandlerThread:368298 [interfaces.py:finish():200] Joined disk monitor
+2024-09-07 16:33:05,943 INFO    HandlerThread:368298 [interfaces.py:finish():200] Joined gpu monitor
+2024-09-07 16:33:05,948 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/wandb-summary.json
+2024-09-07 16:33:05,952 INFO    HandlerThread:368298 [interfaces.py:finish():200] Joined memory monitor
+2024-09-07 16:33:05,956 INFO    HandlerThread:368298 [interfaces.py:finish():200] Joined network monitor
+2024-09-07 16:33:05,963 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: defer
+2024-09-07 16:33:05,966 INFO    SenderThread:368298 [sender.py:send_request_defer():622] handle sender defer: 2
+2024-09-07 16:33:05,974 INFO    SenderThread:368298 [sender.py:transition_state():626] send defer: 3
+2024-09-07 16:33:05,980 DEBUG   SenderThread:368298 [sender.py:send():391] send: stats
+2024-09-07 16:33:05,980 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: defer
+2024-09-07 16:33:05,989 INFO    HandlerThread:368298 [handler.py:handle_request_defer():184] handle defer: 3
+2024-09-07 16:33:05,993 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: defer
+2024-09-07 16:33:05,998 INFO    SenderThread:368298 [sender.py:send_request_defer():622] handle sender defer: 3
+2024-09-07 16:33:05,998 INFO    SenderThread:368298 [sender.py:transition_state():626] send defer: 4
+2024-09-07 16:33:06,006 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: defer
+2024-09-07 16:33:06,013 INFO    HandlerThread:368298 [handler.py:handle_request_defer():184] handle defer: 4
+2024-09-07 16:33:06,018 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: defer
+2024-09-07 16:33:06,022 INFO    SenderThread:368298 [sender.py:send_request_defer():622] handle sender defer: 4
+2024-09-07 16:33:06,022 INFO    SenderThread:368298 [sender.py:transition_state():626] send defer: 5
+2024-09-07 16:33:06,027 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: defer
+2024-09-07 16:33:06,034 INFO    HandlerThread:368298 [handler.py:handle_request_defer():184] handle defer: 5
+2024-09-07 16:33:06,040 DEBUG   SenderThread:368298 [sender.py:send():391] send: summary
+2024-09-07 16:33:06,056 INFO    SenderThread:368298 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-09-07 16:33:06,056 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: defer
+2024-09-07 16:33:06,061 INFO    SenderThread:368298 [sender.py:send_request_defer():622] handle sender defer: 5
+2024-09-07 16:33:06,061 INFO    SenderThread:368298 [sender.py:transition_state():626] send defer: 6
+2024-09-07 16:33:06,067 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: defer
+2024-09-07 16:33:06,069 INFO    HandlerThread:368298 [handler.py:handle_request_defer():184] handle defer: 6
+2024-09-07 16:33:06,073 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: defer
+2024-09-07 16:33:06,077 INFO    SenderThread:368298 [sender.py:send_request_defer():622] handle sender defer: 6
+2024-09-07 16:33:06,077 INFO    SenderThread:368298 [sender.py:transition_state():626] send defer: 7
+2024-09-07 16:33:06,077 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: status_report
+2024-09-07 16:33:06,087 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: defer
+2024-09-07 16:33:06,093 INFO    HandlerThread:368298 [handler.py:handle_request_defer():184] handle defer: 7
+2024-09-07 16:33:06,098 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: defer
+2024-09-07 16:33:06,102 INFO    SenderThread:368298 [sender.py:send_request_defer():622] handle sender defer: 7
+2024-09-07 16:33:06,741 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: poll_exit
+2024-09-07 16:33:06,969 INFO    Thread-17 :368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/wandb-summary.json
+2024-09-07 16:33:07,473 INFO    SenderThread:368298 [sender.py:transition_state():626] send defer: 8
+2024-09-07 16:33:07,473 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: defer
+2024-09-07 16:33:07,473 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: poll_exit
+2024-09-07 16:33:07,478 INFO    HandlerThread:368298 [handler.py:handle_request_defer():184] handle defer: 8
+2024-09-07 16:33:07,488 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: defer
+2024-09-07 16:33:07,502 INFO    SenderThread:368298 [sender.py:send_request_defer():622] handle sender defer: 8
+2024-09-07 16:33:07,511 INFO    SenderThread:368298 [job_builder.py:build():443] Attempting to build job artifact
+2024-09-07 16:33:07,521 INFO    SenderThread:368298 [job_builder.py:_get_source_type():583] no source found
+2024-09-07 16:33:07,524 INFO    SenderThread:368298 [sender.py:transition_state():626] send defer: 9
+2024-09-07 16:33:07,535 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: defer
+2024-09-07 16:33:07,540 INFO    HandlerThread:368298 [handler.py:handle_request_defer():184] handle defer: 9
+2024-09-07 16:33:07,545 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: defer
+2024-09-07 16:33:07,576 INFO    SenderThread:368298 [sender.py:send_request_defer():622] handle sender defer: 9
+2024-09-07 16:33:07,582 INFO    SenderThread:368298 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-09-07 16:33:07,741 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: poll_exit
+2024-09-07 16:33:07,972 INFO    SenderThread:368298 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:33:07,972 INFO    SenderThread:368298 [dir_watcher.py:finish():388] scan: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files
+2024-09-07 16:33:07,977 INFO    SenderThread:368298 [dir_watcher.py:finish():402] scan save: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/conda-environment.yaml conda-environment.yaml
+2024-09-07 16:33:07,981 INFO    SenderThread:368298 [dir_watcher.py:finish():402] scan save: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/config.yaml config.yaml
+2024-09-07 16:33:07,992 INFO    SenderThread:368298 [dir_watcher.py:finish():402] scan save: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log output.log
+2024-09-07 16:33:08,003 INFO    SenderThread:368298 [dir_watcher.py:finish():402] scan save: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/requirements.txt requirements.txt
+2024-09-07 16:33:08,025 INFO    SenderThread:368298 [dir_watcher.py:finish():402] scan save: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/wandb-metadata.json wandb-metadata.json
+2024-09-07 16:33:08,038 INFO    SenderThread:368298 [dir_watcher.py:finish():402] scan save: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/wandb-summary.json wandb-summary.json
+2024-09-07 16:33:08,054 INFO    SenderThread:368298 [sender.py:transition_state():626] send defer: 10
+2024-09-07 16:33:08,055 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: poll_exit
+2024-09-07 16:33:08,055 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: defer
+2024-09-07 16:33:08,072 INFO    HandlerThread:368298 [handler.py:handle_request_defer():184] handle defer: 10
+2024-09-07 16:33:08,073 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: defer
+2024-09-07 16:33:08,081 INFO    SenderThread:368298 [sender.py:send_request_defer():622] handle sender defer: 10
+2024-09-07 16:33:08,087 INFO    SenderThread:368298 [file_pusher.py:finish():169] shutting down file pusher
+2024-09-07 16:33:08,631 INFO    wandb-upload_0:368298 [upload_job.py:push():130] Uploaded file /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/conda-environment.yaml
+2024-09-07 16:33:08,770 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: poll_exit
+2024-09-07 16:33:08,771 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: poll_exit
+2024-09-07 16:33:09,108 INFO    wandb-upload_4:368298 [upload_job.py:push():130] Uploaded file /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/wandb-summary.json
+2024-09-07 16:33:09,585 INFO    wandb-upload_3:368298 [upload_job.py:push():130] Uploaded file /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/requirements.txt
+2024-09-07 16:33:09,594 INFO    wandb-upload_2:368298 [upload_job.py:push():130] Uploaded file /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/config.yaml
+2024-09-07 16:33:09,623 INFO    wandb-upload_1:368298 [upload_job.py:push():130] Uploaded file /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/files/output.log
+2024-09-07 16:33:09,771 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: poll_exit
+2024-09-07 16:33:09,772 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: poll_exit
+2024-09-07 16:33:09,824 INFO    Thread-16 :368298 [sender.py:transition_state():626] send defer: 11
+2024-09-07 16:33:09,824 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: defer
+2024-09-07 16:33:09,829 INFO    HandlerThread:368298 [handler.py:handle_request_defer():184] handle defer: 11
+2024-09-07 16:33:09,835 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: defer
+2024-09-07 16:33:09,840 INFO    SenderThread:368298 [sender.py:send_request_defer():622] handle sender defer: 11
+2024-09-07 16:33:09,845 INFO    SenderThread:368298 [file_pusher.py:join():175] waiting for file pusher
+2024-09-07 16:33:09,851 INFO    SenderThread:368298 [sender.py:transition_state():626] send defer: 12
+2024-09-07 16:33:09,856 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: defer
+2024-09-07 16:33:09,861 INFO    HandlerThread:368298 [handler.py:handle_request_defer():184] handle defer: 12
+2024-09-07 16:33:09,867 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: defer
+2024-09-07 16:33:09,872 INFO    SenderThread:368298 [sender.py:send_request_defer():622] handle sender defer: 12
+2024-09-07 16:33:09,877 INFO    SenderThread:368298 [file_stream.py:finish():601] file stream finish called
+2024-09-07 16:33:10,714 INFO    SenderThread:368298 [file_stream.py:finish():605] file stream finish is done
+2024-09-07 16:33:10,714 INFO    SenderThread:368298 [sender.py:transition_state():626] send defer: 13
+2024-09-07 16:33:10,714 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: defer
+2024-09-07 16:33:10,743 INFO    HandlerThread:368298 [handler.py:handle_request_defer():184] handle defer: 13
+2024-09-07 16:33:10,748 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: defer
+2024-09-07 16:33:10,753 INFO    SenderThread:368298 [sender.py:send_request_defer():622] handle sender defer: 13
+2024-09-07 16:33:10,763 INFO    SenderThread:368298 [sender.py:transition_state():626] send defer: 14
+2024-09-07 16:33:10,768 DEBUG   SenderThread:368298 [sender.py:send():391] send: final
+2024-09-07 16:33:10,768 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: defer
+2024-09-07 16:33:10,772 DEBUG   SenderThread:368298 [sender.py:send():391] send: footer
+2024-09-07 16:33:10,776 INFO    HandlerThread:368298 [handler.py:handle_request_defer():184] handle defer: 14
+2024-09-07 16:33:10,786 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: poll_exit
+2024-09-07 16:33:10,786 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: defer
+2024-09-07 16:33:10,801 INFO    SenderThread:368298 [sender.py:send_request_defer():622] handle sender defer: 14
+2024-09-07 16:33:10,808 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: poll_exit
+2024-09-07 16:33:10,809 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: server_info
+2024-09-07 16:33:10,846 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: poll_exit
+2024-09-07 16:33:10,846 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: server_info
+2024-09-07 16:33:10,853 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: get_summary
+2024-09-07 16:33:10,869 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: sampled_history
+2024-09-07 16:33:10,874 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: internal_messages
+2024-09-07 16:33:11,126 DEBUG   SenderThread:368298 [sender.py:send_request():418] send_request: poll_exit
+2024-09-07 16:33:11,126 INFO    MainThread:368298 [wandb_run.py:_footer_history_summary_info():4078] rendering history
+2024-09-07 16:33:11,133 INFO    MainThread:368298 [wandb_run.py:_footer_history_summary_info():4110] rendering summary
+2024-09-07 16:33:11,138 INFO    MainThread:368298 [wandb_run.py:_footer_sync_info():4037] logging synced files
+2024-09-07 16:33:11,144 DEBUG   HandlerThread:368298 [handler.py:handle_request():158] handle_request: shutdown
+2024-09-07 16:33:11,150 INFO    HandlerThread:368298 [handler.py:finish():884] shutting down handler
+2024-09-07 16:33:11,853 INFO    WriterThread:368298 [datastore.py:close():296] close: /root/KnowPrompt/wandb/run-20240907_162852-lyy45iir/run-lyy45iir.wandb
+2024-09-07 16:33:12,126 INFO    SenderThread:368298 [sender.py:finish():1631] shutting down sender
+2024-09-07 16:33:12,127 INFO    SenderThread:368298 [file_pusher.py:finish():169] shutting down file pusher
+2024-09-07 16:33:12,127 INFO    SenderThread:368298 [file_pusher.py:join():175] waiting for file pusher

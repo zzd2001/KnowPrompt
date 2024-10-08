@@ -1,0 +1,30 @@
+/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory output exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+09/06/2024 10:42:31 - INFO - data.processor -   Writing example 0 of 810
+09/06/2024 10:42:31 - INFO - data.processor -   input text : 明日，召问其故，曰：「玉汝为严公之使，今严公之地分裂，而不能救止，无面目还报，将死此荒寒之野，是以哭耳。
+09/06/2024 10:42:31 - INFO - data.processor -   prompt : [sub]  [sub] <mask> [obj]  [obj] .
+09/06/2024 10:42:31 - INFO - data.processor -   label : 上下级
+Traceback (most recent call last):
+  File "main.py", line 244, in <module>
+    main()
+  File "main.py", line 190, in main
+    trainer.fit(lit_model, datamodule=data)
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 553, in fit
+    self._run(model)
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 865, in _run
+    self._call_setup_hook(model)  # allow user to setup lightning_module in accelerator environment
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1169, in _call_setup_hook
+    self.datamodule.setup(stage=fn)
+  File "/root/.conda/envs/knowprompt/lib/python3.8/site-packages/pytorch_lightning/core/datamodule.py", line 428, in wrapped_fn
+    fn(*args, **kwargs)
+  File "/root/KnowPrompt/data/dialogue.py", line 166, in setup
+    self.data_train = get_dataset("train", self.args, self.tokenizer, self.processor)
+  File "/root/KnowPrompt/data/processor.py", line 1133, in get_dataset
+    dataset = convert_examples_to_features(
+  File "/root/KnowPrompt/data/processor.py", line 811, in convert_examples_to_features
+    assert sub_st != -1 and obj_st != -1
+AssertionError
+loading..
